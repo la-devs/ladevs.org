@@ -1,20 +1,22 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import SlackInviteForm from "../components/slackInviteForm"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Under Construction</h1>
+    <h4>A new home for software developers is being built</h4>
+    <p>
+      Want to help us buid a community focused on helping each other connect, have fun with technolyo, make friends, and so much more?<br />
+      Request an invite to our Slack workspace.
+    </p>
+
+    <SlackInviteForm />
+    
+    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
   </Layout>
 )
 
