@@ -6,7 +6,7 @@ import SlackInviteForm from "../components/slackInviteForm"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="LA Devs - A Community for Los Angeles Based Software Developers" keywords={[`gatsby`, `application`, `react`]} />
     <h1>Under Construction</h1>
     <h4>A new home for software developers is being built</h4>
     <p>
