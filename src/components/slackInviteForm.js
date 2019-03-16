@@ -6,7 +6,7 @@ class SlackInviteForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      validEmail: false,
+      validEmail: null,
     };
     this.validateEmail = this.validateEmail.bind(this);
   }
@@ -24,6 +24,9 @@ class SlackInviteForm extends React.Component {
           name='_invite_requested'
           placeholder='Email Address'
           onChange={this.validateEmail}
+          style={{
+            border: this.state.validEmail === false ? '1px solid red' : '',
+          }}
         />
         <input
           type='submit'
@@ -33,6 +36,9 @@ class SlackInviteForm extends React.Component {
             pointerEvents: this.state.validEmail ? 'inherit' : 'none',
           }}
         />
+        {this.state.validEmail === false &&
+          <span style={{color: 'red'}}>Email is invalid</span>
+        }
       </form>
     );
   }
