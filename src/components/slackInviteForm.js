@@ -1,10 +1,10 @@
 import React from "react"
 
 const SlackInviteForm = () => (
-  <>
-    <input placeholder="Email Address" />
-    <button type="input">Request Invite</button>
-  </>
+  <form action="https://formspree.io/info@ladevs.org" method="POST">
+    <input type="email" name="_invte_requested" placeholder="Email Address" />
+    <input type="submit" value="Request Invite" />
+  </form>
 );
 
 export default SlackInviteForm;
