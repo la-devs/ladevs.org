@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import constants from '../utils/constants';
+import { LA_DEVS_EMAIL, EMAIL_REGEX } from '../utils/constants';
 
 class SlackInviteForm extends React.Component {
   constructor(props) {
@@ -8,13 +8,31 @@ class SlackInviteForm extends React.Component {
     this.state = {
       validEmail: false,
     };
+    this.validateEmail = this.validateEmail.bind(this);
   }
 
-  render () {
+  validateEmail(e) {
+    const validEmail = EMAIL_REGEX.test(String(e.target.value).toLowerCase()) ? true : false;
+    this.setState({ validEmail });
+  }
+
+  render() {
     return (
-      <form action={`https://formspree.io/${constants.LA_DEVS_EMAIL}`} method='POST'>
-        <input type='email' name='_invte_requested' placeholder='Email Address' />
-        <input type='submit' value='Request Invite' />
+      <form action={`https://formspree.io/${LA_DEVS_EMAIL}`} method='POST'>
+        <input
+          type='email'
+          name='_invte_requested'
+          placeholder='Email Address'
+          onChange={this.validateEmail}
+        />
+        <input
+          type='submit'
+          value='Request Invite'
+          disabled={!this.state.validEmail}
+          style={{
+            pointerEvents: this.state.validEmail ? 'inherit' : 'none',
+          }}
+        />
       </form>
     );
   }
