@@ -21,7 +21,7 @@ class SlackInviteForm extends React.Component {
       <form action={`https://formspree.io/${LA_DEVS_EMAIL}`} method='POST'>
         <input
           type='email'
-          name='_invte_requested'
+          name='_invite_requested'
           placeholder='Email Address'
           onChange={this.validateEmail}
         />
