@@ -8,11 +8,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 import Header from './header'
 import Footer from './footer'
-import './layout.css'
+import GlobalStyle from './layout-styles'
 
 const Container = styled.div`
   margin: 0 auto;
@@ -42,6 +42,7 @@ const Layout = ({ children }) => (
           <main>{children}</main>
         </Container>
         <Footer />
+        <GlobalStyle />
       </>
     )}
   />
