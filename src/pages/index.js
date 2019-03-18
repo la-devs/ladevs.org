@@ -3,14 +3,15 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SlackInviteForm from "../components/slackInviteForm"
+import { SEO_TAGS } from '../utils/constants';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="LA Devs - A Community for Los Angeles Based Software Developers" keywords={SEO_TAGS} />
     <h1>Under Construction</h1>
-    <h4>A new home for software developers is being built</h4>
+    <h4>A new home for Los Angeles based software developers is being built</h4>
     <p>
-      Want to help us buid a community focused on helping each other connect, have fun with technology, make friends, and so much more?<br />
+      Want to help us buid an inclusive community focused on helping each other connect, having fun with technology, making friends, and so much more?<br />
       Request an invite to our Slack workspace.
     </p>
 
