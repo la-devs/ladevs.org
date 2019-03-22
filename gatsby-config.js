@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `LA Devs`,
-    description: `A new home for Los Angeles based software developers is being built`,
+    description: `We are an inclusive, Los Angeles based technology community focused on helping each other grow through knowledge sharing and friendships`,
     author: `Jasmin && Ryan`,
   },
   plugins: [

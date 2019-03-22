@@ -8,11 +8,12 @@ import { SEO_TAGS, SEO_TITLES } from '../utils/constants';
 const IndexPage = () => (
   <Layout>
     <SEO title={SEO_TITLES.homepage} keywords={SEO_TAGS} />
-    <h1>Under Construction</h1>
-    <h4>A new home for Los Angeles based software developers is being built</h4>
+    <h1>Under Construction <span role="img" aria-label="construction emoji">🚧</span></h1>
     <p>
-      Want to help us buid an inclusive community focused on helping each other connect, having fun with technology, making friends, and so much more?<br />
-      Request an invite to our Slack workspace.
+      We are an inclusive, Los Angeles based technology community focused on helping each other grow through knowledge sharing and friendships.
+    </p>
+    <p>
+      Want to help build an inclusive, diverse community for LA? Request an invite to our Slack workspace.
     </p>
 
     <SlackInviteForm />
