@@ -3,11 +3,11 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SlackInviteForm from "../components/slackInviteForm"
-import { SEO_TAGS } from '../utils/constants';
+import { SEO_TAGS, SEO_TITLES } from '../utils/constants';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="LA Devs - A Community for Los Angeles Based Software Developers" keywords={SEO_TAGS} />
+    <SEO title={SEO_TITLES.homepage} keywords={SEO_TAGS} />
     <h1>Under Construction</h1>
     <h4>A new home for Los Angeles based software developers is being built</h4>
     <p>
