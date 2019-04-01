@@ -4,4 +4,4 @@
 
 The ladevs.org core
 
-Want to take a look at our open issues? Check out out issue tracker [here](https://github.com/la-devs/issue-tracking).
+Want to take a look at our open issues? Check out our issue tracker [here](https://github.com/la-devs/issue-tracking).
