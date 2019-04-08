@@ -21,6 +21,9 @@ class SlackInviteForm extends React.Component {
   render() {
     return (
       <form action={`https://formspree.io/${LA_DEVS_EMAIL}`} method='POST'>
+        {this.state.validEmail === false &&
+          <span style={{color: 'red', display: 'block'}}>Email is invalid</span>
+        }
         <Field
           type='email'
           name='_invite_requested'
@@ -35,9 +38,6 @@ class SlackInviteForm extends React.Component {
         >
           Request Invite
         </Button>
-        {this.state.validEmail === false &&
-          <span style={{color: 'red'}}>Email is invalid</span>
-        }
       </form>
     );
   }

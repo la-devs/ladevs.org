@@ -1,5 +1,6 @@
 
 .field {
+  display: inline-block;
   color: grey;
   display: inline-block;
   text-align: left;
@@ -12,7 +13,13 @@
   -webkit-appearance: none;
   font-family: 'Montserrat', sans-serif;
   padding-left: 10px;
-  min-width: 200px;
+  width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .field {
+    width: 130px;
+  }
 }
 
 .field.invalid {
