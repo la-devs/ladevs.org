@@ -2,6 +2,7 @@ import React from 'react';
 
 import { LA_DEVS_EMAIL, EMAIL_REGEX } from '../utils/constants';
 import Button from './button';
+import Field from './field';
 
 class SlackInviteForm extends React.Component {
   constructor(props) {
@@ -20,18 +21,16 @@ class SlackInviteForm extends React.Component {
   render() {
     return (
       <form action={`https://formspree.io/${LA_DEVS_EMAIL}`} method='POST'>
-        <input
+        <Field
           type='email'
           name='_invite_requested'
           placeholder='Email Address'
           onChange={this.validateEmail}
-          style={{
-            border: this.state.validEmail === false ? '1px solid red' : '',
-          }}
+          error={!this.validateEmail}
         />
         <Button
-          buttonType={'submit'}
-          size={'md'}
+          buttonType='submit'
+          size='md'
           disabled={!this.state.validEmail}
         >
           Request Invite

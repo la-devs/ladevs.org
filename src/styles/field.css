@@ -1,0 +1,20 @@
+
+.field {
+  color: grey;
+  display: inline-block;
+  text-align: left;
+  line-height: 1.5;
+  height: 30px;
+  vertical-align: middle;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  transition: all 150ms ease-in-out;
+  -webkit-appearance: none;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 10px;
+  min-width: 200px;
+}
+
+.field.invalid {
+  border: 1px solid red;
+}
