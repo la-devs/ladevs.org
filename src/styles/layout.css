@@ -35,8 +35,9 @@ p {
 }
 
 .layout-container {
-  margin: 0 auto;
+  margin: 0 auto -50px;
   max-width: 960px;
   text-align: center;
   padding: 0px 1.45rem;
+  min-height: 100%;
 }
