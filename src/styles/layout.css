@@ -10,8 +10,33 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.9rem;
+}
+
+.cta-text {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: bold;
+}
+
+.brand {
+  font-size: 32px;
+}
+
+.brand a {
+  text-decoration: none;
+  color: black;
+}
+
 .layout-container {
   margin: 0 auto;
   max-width: 960px;
   text-align: center;
+  padding: 0px 1.45rem;
 }
