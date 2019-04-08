@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { LA_DEVS_EMAIL, EMAIL_REGEX } from '../utils/constants';
+import Button from './button';
 
 class SlackInviteForm extends React.Component {
   constructor(props) {
@@ -28,14 +29,13 @@ class SlackInviteForm extends React.Component {
             border: this.state.validEmail === false ? '1px solid red' : '',
           }}
         />
-        <input
-          type='submit'
-          value='Request Invite'
+        <Button
+          buttonType={'submit'}
+          size={'md'}
           disabled={!this.state.validEmail}
-          style={{
-            pointerEvents: this.state.validEmail ? 'inherit' : 'none',
-          }}
-        />
+        >
+          Request Invite
+        </Button>
         {this.state.validEmail === false &&
           <span style={{color: 'red'}}>Email is invalid</span>
         }

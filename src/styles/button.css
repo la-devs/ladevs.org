@@ -1,0 +1,49 @@
+@import './fonts.css';
+
+button {
+  display: inline-block;
+  background: #ff7657;
+  color: #fcf9ed;
+  border-radius: 10rem;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.5;
+  border: 0.1rem solid transparent;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.12);
+  transition: all 150ms ease-in-out;
+  margin: 5px;
+}
+
+button:disabled {
+  opacity: .6;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+button:focused {
+  box-shadow: .2rem .4rem .8rem -.2rem rgba(13,95,68,0.18);
+  opacity: 0.9;
+}
+
+button:hover {
+  box-shadow: .2rem .4rem .8rem -.2rem rgba(13,95,68,0.18);
+  opacity: 0.9;
+}
+
+button.sm {
+  padding: 5px 2px 5px 2px;
+  width: 6rem;
+}
+
+button.md {
+  padding: 10px 5px 10px 5px;
+  width: 10rem;
+}
+
+button.lg {
+  padding: 12px 8px 12px 8px;
+  width: 12rem;
+}
