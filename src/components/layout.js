@@ -9,14 +9,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
+import '../styles/layout.css';
 import Header from './header';
-import styled from 'styled-components';
-
-const Content = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  text-align: ${props => props.center ? 'center' : 'left'};
-`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -32,9 +26,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Content center>
+        <div className='layout-container'>
           <main>{children}</main>
-        </Content>
+        </div>
         <footer>
           © {new Date().getFullYear()}, Built with ❤️ using
           {` `}
