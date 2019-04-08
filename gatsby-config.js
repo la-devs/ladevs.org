@@ -5,7 +5,6 @@ module.exports = {
     author: `Jasmin && Ryan`,
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: `src/images/favicon.png`,
+        logo: `./src/images/favicon.png`,
       },
     },
   ],
