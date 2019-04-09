@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/footer.css';
 
-const Footr = ({ children }) => (
+const Footer = ({ children }) => (
   <footer>
     © {new Date().getFullYear()}, Built with ❤️ using
     {` `}
@@ -10,4 +10,4 @@ const Footr = ({ children }) => (
   </footer>
 )
 
-export default Footr
+export default Footer
