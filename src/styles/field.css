@@ -1,0 +1,27 @@
+
+.field {
+  display: inline-block;
+  color: grey;
+  display: inline-block;
+  text-align: left;
+  line-height: 1.5;
+  height: 30px;
+  vertical-align: middle;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  transition: all 150ms ease-in-out;
+  -webkit-appearance: none;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 10px;
+  width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .field {
+    width: 130px;
+  }
+}
+
+.field.invalid {
+  border: 1px solid red;
+}
