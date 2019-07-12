@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -12,9 +11,7 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 className='brand'>
-        <Link to='/'>
-          {siteTitle}
-        </Link>
+        {siteTitle}
       </h1>
     </div>
   </header>

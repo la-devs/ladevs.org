@@ -4,3 +4,6 @@ export const SEO_TAGS = ['los angeles', 'la', 'slack', 'software', 'developers',
 export const SEO_TITLES = {
   homepage: 'A Community for Los Angeles Based Software Developers',
 };
+export const SITE_METADATA = {
+  title: 'LA Devs',
+};

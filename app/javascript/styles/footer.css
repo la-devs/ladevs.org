@@ -4,6 +4,10 @@ footer {
   margin-top: 20px;
 }
 
+footer a {
+  text-decoration: none;
+}
+
 .push {
   height: 50px;
 }
