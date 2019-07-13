@@ -1,4 +1,4 @@
-class Api::V1::InvitationRequest < ApplicationController
+class Api::V1::InvitationRequest < Api::ApiController
   def create
     response = SlackMsgr.chat(:post_message, {
       channel: 'invite-requests',
