@@ -1,11 +1,10 @@
 class Api::V1::InvitationRequestController < Api::ApiController
   def create
-    binding.pry
     response = SlackMsgr.chat(:post_message, {
       channel: ENV['SLACK_INVITE_CHANNEL'],
-      text: 'testing :noodles:'
+      text: "EMAIL REQUEST: #{params['_invite_requested']}"
     })
 
-    render json: response
+    redirect_to root_path
   end
 end
