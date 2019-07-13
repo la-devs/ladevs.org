@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LA_DEVS_EMAIL, EMAIL_REGEX } from '../utils/constants';
+import { INTERNAL_API, EMAIL_REGEX } from '../utils/constants';
 import Button from './button';
 import Field from './field';
 
@@ -20,7 +20,7 @@ class SlackInviteForm extends React.Component {
 
   render() {
     return (
-      <form action={`https://formspree.io/${LA_DEVS_EMAIL}`} method='POST'>
+      <form action={`${INTERNAL_API}/invitation_request`} method='POST'>
         {this.state.validEmail === false &&
           <span style={{color: 'red', display: 'block'}}>Email is invalid</span>
         }
