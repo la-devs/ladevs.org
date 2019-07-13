@@ -1,4 +1,5 @@
 export const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+export const INTERNAL_API = '/api/v1';
 export const LA_DEVS_EMAIL = 'info@ladevs.org';
 export const SEO_TAGS = ['los angeles', 'la', 'slack', 'software', 'developers', 'networking', 'community'];
 export const SEO_TITLES = {
