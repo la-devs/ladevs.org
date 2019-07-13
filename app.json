@@ -1,0 +1,21 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "description": "The ladevs.org core",
+  "env": {
+    "RAILS_ENV": "production"
+  },
+  "formation": {
+  },
+  "name": "ladevs.org",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
+  "stack": "heroku-18"
+}
