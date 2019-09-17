@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 
@@ -37,10 +39,14 @@ class SlackInviteForm extends React.Component {
         {this.state.validEmail === false &&
           <span style={{color: 'red', display: 'block'}}>Email is invalid</span>
         }
+        <label>
+          Email Address
+        </label>
+        <FontAwesomeIcon icon={faEnvelope} />
         <Field
           type='email'
           name='email'
-          placeholder='Email Address'
+          placeholder='Your email'
           onChange={this.validateEmail}
           error={!this.validateEmail}
         />

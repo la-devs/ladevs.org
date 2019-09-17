@@ -20,7 +20,9 @@ const IndexPage = () => (
       Request an invite to our Slack workspace.
     </p>
 
-    <SlackInviteForm />
+    <div style={{backgroundColor: "#fefefe", borderRadius: "10px", padding: "0 20%"}}>
+      <SlackInviteForm />
+    </div>
 
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }} />
   </Layout>
