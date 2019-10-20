@@ -12,7 +12,8 @@ const Button = (props) => {
     loading,
     action,
     children,
-    style
+    style,
+    onClick
   } = props
 
   const interactive = !disabled && !loading
@@ -24,7 +25,7 @@ const Button = (props) => {
     <button
       {...(buttonType && { type: buttonType })}
       {...(!interactive && { disabled: true })}
-      onClick={clickHandler}
+      onClick={(onClick || clickHandler)}
       className={size}
       style={style}
     >
