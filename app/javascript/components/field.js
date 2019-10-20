@@ -5,6 +5,7 @@ import '../styles/field.css';
 
 const Field = (props) => {
   const {
+    id,
     type,
     name,
     placeholder,
@@ -14,6 +15,7 @@ const Field = (props) => {
 
   return (
     <input
+      id={id}
       type={type}
       name={name}
       placeholder={placeholder}
