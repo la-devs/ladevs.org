@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :invitation_request, only: [:create]
+      resources :message_action, only: [:create]
     end
   end
 end
