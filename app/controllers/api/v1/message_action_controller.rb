@@ -1,20 +1,23 @@
 class Api::V1::MessageActionController < Api::ApiController
-  def create
-    payload = JSON.parse(params[:payload], symbolize_names: true)
-    action = payload[:actions].first
-    response = {
-      "reject_user" => {
-        emoji: ":x:",
-        verb: "rejected"
-      },
-      "send_invite" => {
-        emoji: ":white_check_mark:",
-        verb: "invited"
-      }
-    }[action[:name]]
+  before_action :validate_slack_token
 
-    render json: {
-      text: "#{response[:emoji]} #{payload[:user][:name].upcase} *#{response[:verb]} #{action[:value]}*"
-    }
+  def create
+    service = MessageActionService.new(payload)
+    service.handle_action
+
+    render json: service.response
+  end
+
+  private
+  def validate_slack_token
+    unless payload[:token] == ENV['SLACK_SIGNING_SECRET']
+      head 403
+    end
+  end
+
+  def payload
+    return {} unless params[:payload]
+
+    JSON.parse(params[:payload], symbolize_names: true)
   end
 end
