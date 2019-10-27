@@ -1,5 +1,6 @@
 import React from 'react';
 import * as axios from 'axios';
+import '../styles/slack-invite-form.scss';
 
 import { INTERNAL_API, EMAIL_REGEX } from '../utils/constants';
 import Button from './button';
@@ -56,26 +57,51 @@ class SlackInviteForm extends React.Component {
 
   render() {
     return (
-      <form>
+      <form className="slack-invite-form">
         {this.state.validEmail === false &&
           <span style={{color: 'red', display: 'block'}}>Email is invalid</span>
         }
-        <Field
-          id="email"
-          type='email'
-          name='_invite_requested'
-          placeholder='Email Address'
-          value={this.state.email}
-          onChange={this.validateEmail}
-          error={!this.validateEmail}
-        />
-        <Button
-          size='md'
-          disabled={!this.state.validEmail}
-          onClick={this.sendRequest}
-        >
-          Request Invite
-        </Button>
+        <div className="slack-invite-form__input-container">
+          <Field
+            id="first_name"
+            className="slack-invite-form__input"
+            type='text'
+            name='_first_name'
+            placeholder='First name'
+            value={this.state.email}
+          />
+        </div>
+        <div className="slack-invite-form__input-container">
+          <Field
+            id="last_name"
+            className="slack-invite-form__input"
+            type='text'
+            name='_last_name'
+            placeholder='Last name'
+            value={this.state.email}
+          />
+        </div>
+        <div className="slack-invite-form__input-container">
+          <Field
+            id="email"
+            className="slack-invite-form__input"
+            type='email'
+            name='_invite_requested'
+            placeholder='Email Address'
+            value={this.state.email}
+            onChange={this.validateEmail}
+            error={!this.validateEmail}
+          />
+        </div>
+        <div className="slack-invite-form__submit-container">
+          <Button
+            size='md'
+            disabled={!this.state.validEmail}
+            onClick={this.sendRequest}
+          >
+            Request Invite
+          </Button>
+        </div>
         {this.state.flashMessage.status &&
           <span style={{color: this.state.flashMessage.status, display: 'block'}}>
             {this.state.flashMessage.message}

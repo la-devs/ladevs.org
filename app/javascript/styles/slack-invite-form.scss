@@ -1,0 +1,14 @@
+.slack-invite-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 25%;
+}
+
+.slack-invite-form__input-container {
+  padding: 3px 0;
+}
+
+.slack-invite-form__submit-container {
+  padding-top: 15px;
+}

@@ -6,6 +6,7 @@ import '../styles/field.css';
 const Field = (props) => {
   const {
     id,
+    className,
     type,
     name,
     placeholder,
@@ -20,7 +21,7 @@ const Field = (props) => {
       name={name}
       placeholder={placeholder}
       onChange={onChange}
-      className={error ? 'field invalid' : 'field'}
+      className={`${className} ${error ? 'field invalid' : 'field'}`}
     />
   )
 }
