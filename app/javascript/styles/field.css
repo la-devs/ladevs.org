@@ -1,7 +1,6 @@
 
 .field {
   display: inline-block;
-  color: grey;
   text-align: left;
   line-height: 1.5;
   height: 30px;
@@ -13,6 +12,10 @@
   font-family: 'Montserrat', sans-serif;
   text-indent: 10px;
   width: 100%;
+}
+
+.field:placeholder {
+  color: hsl(0,0%,50%);
 }
 
 @media only screen and (max-width: 600px) {
