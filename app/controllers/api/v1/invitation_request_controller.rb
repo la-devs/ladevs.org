@@ -1,10 +1,15 @@
 class Api::V1::InvitationRequestController < Api::ApiController
   def create
-    response = SlackMsgr.chat(:post_message, {
-      channel: ENV['SLACK_INVITE_CHANNEL'],
-      text: "EMAIL REQUEST: #{params['invite_requested']}"
-    })
+    user = User.new(invitation_params)
+    if user.save
+      render json: SlackMessagingService.call(user)
+    else
+      render json: { error: user.errors.full_messages }
+    end
+  end
 
-    render json: response
+  private
+  def invitation_params
+    params.permit(:first_name, :last_name, :email, :occupation)
   end
 end

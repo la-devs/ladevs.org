@@ -1,0 +1,23 @@
+.slack-invite-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 25%;
+}
+
+.slack-invite-form__input-container {
+  padding: 3px 0;
+}
+
+.slack-invite-form__submit-container {
+  padding-top: 10px;
+}
+
+.slack-invite-form__select {
+  width: 101%;
+  font-size: 12px;
+}
+
+.slack-invite-form__agree-terms-text {
+  font-size: 13px;
+}

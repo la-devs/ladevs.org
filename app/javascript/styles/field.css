@@ -1,8 +1,6 @@
 
 .field {
   display: inline-block;
-  color: grey;
-  display: inline-block;
   text-align: left;
   line-height: 1.5;
   height: 30px;
@@ -12,8 +10,12 @@
   transition: all 150ms ease-in-out;
   -webkit-appearance: none;
   font-family: 'Montserrat', sans-serif;
-  padding-left: 10px;
-  width: 200px;
+  text-indent: 10px;
+  width: 100%;
+}
+
+.field:placeholder {
+  color: hsl(0,0%,50%);
 }
 
 @media only screen and (max-width: 600px) {
