@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2019_10_26_213734) do
     t.string "last_name"
     t.string "occupation"
     t.string "email"
-    t.boolean "located_in_southern_california", default: false, null: false
     t.boolean "is_invited", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

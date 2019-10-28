@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :last_name
       t.string :occupation
       t.string :email
-      t.boolean :located_in_southern_california, null: false, default: false
       t.boolean :is_invited, null: false, default: false
 
       t.timestamps

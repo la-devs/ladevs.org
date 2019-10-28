@@ -80,16 +80,11 @@ class SlackInviteForm extends React.Component {
         last_name: lastName,
         occupation: occupation.value,
       })
-        .then(() => {
-          this.setState({
-            flashMessage: {
-              status: "green",
-              message: "Request successfully sent!",
-            },
-            ...resetState,
-          });
+        .then(resp => {
+          const flashMessage = resp.data.error ? {status: "red", message: resp.data.error.join(". ")} : {status: "green", message: "Request successfully sent!"};
+          this.setState({flashMessage, ...resetState});
         })
-        .catch(() => {
+        .catch(resp => {
           this.setState({
             flashMessage: {
               status: "red",

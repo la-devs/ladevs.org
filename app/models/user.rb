@@ -11,4 +11,8 @@ class User < ApplicationRecord
     project_manager: "project/ product manager",
     other: "other"
   }
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
