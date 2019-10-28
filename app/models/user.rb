@@ -12,6 +12,8 @@ class User < ApplicationRecord
     other: "other"
   }
 
+  scope :invited, -> { where(is_invited: true) }
+
   def full_name
     "#{first_name} #{last_name}"
   end

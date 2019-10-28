@@ -4,7 +4,7 @@ class Api::V1::InvitationRequestController < Api::ApiController
     if user.save
       render json: SlackMessagingService.call(user)
     else
-      render json: {error: user.errors.full_messages}
+      render json: { error: user.errors.full_messages }
     end
   end
 
