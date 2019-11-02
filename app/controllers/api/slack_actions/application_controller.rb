@@ -5,12 +5,14 @@ module SlackMsgr
     private
 
     def verify_signed_secret
-      unless signed_signature_verified?(request.headers["X-Slack-Signature"], request.headers['X-Slack-Request-Timestamp'], request.body.read)
+      headers = request.headers
+      body = request.body.read
+      unless signature_verified?(headers["X-Slack-Signature"], headers['X-Slack-Request-Timestamp'], body)
         render nothing: true, status: :unauthorized
       end
     end
 
-    def signed_signature_verified?(slack_sig, timestamp, body)
+    def signature_verified?(slack_sig, timestamp, body)
       version_number = slack_sig.split("=").first
       base = [version_number, timestamp, body].join(':')
       result = OpenSSL::HMAC.hexdigest(OpenSSL::Digest::SHA256.new, ENV["SLACK_CLIENT_SECRET"], base)
