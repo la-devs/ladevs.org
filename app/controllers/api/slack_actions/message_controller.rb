@@ -1,6 +1,4 @@
-class Api::V1::MessageActionController < Api::ApiController
-  before_action :validate_slack_token
-
+class Api::SlackActions::MessageController < SlackActions::ApplicationController
   def create
     service = MessageActionService.new(payload)
     service.handle_action
@@ -9,11 +7,6 @@ class Api::V1::MessageActionController < Api::ApiController
   end
 
   private
-  def validate_slack_token
-    unless payload[:token] == ENV['SLACK_SIGNING_SECRET']
-      head 403
-    end
-  end
 
   def payload
     return {} unless params[:payload]
