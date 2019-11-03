@@ -1,4 +1,4 @@
-class Api::SlackActions::MessageController < SlackActions::ApplicationController
+class Api::SlackActions::MessageController < Api::SlackActions::ApplicationController
   def create
     service = MessageActionService.new(payload)
     service.handle_action
